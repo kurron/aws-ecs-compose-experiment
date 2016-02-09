@@ -20,7 +20,7 @@ The `ecs` commands expects certain variables to be specified in the environment:
 * AWS_ACCESS_KEY_ID
 * AWS_SECRET_ACCESS_KEY
 * AWS_REGION
-* AWS_CLUSTER 
+* AWS_CLUSTER
 
 #Tips and Tricks
 
@@ -30,6 +30,11 @@ to AWS.  Typing `docker-compose up -d` should install an Nginx container into yo
 to hit `http://localhost:9876` with your browser to verify everything is working.  Once you are satisfied it worked
 correcly, type `docker-compose stop` to remove the container.
 
+##Deploying to AWS
+Once you have verified that the Docker Compose file works locally, you can try and push your workload into the cloud. 
+There is a convenience script that simplifies the operation.  Simply run `bin/install-service.sh` and your workload 
+should be deployed.  You can check your AWS console to verify that the service was successfully installed and running. 
+As before, you should be able to use your browser to hit the Nginx endpoint in the cloud.
 
 #Troubleshooting
 
