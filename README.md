@@ -39,6 +39,10 @@ As before, you should be able to use your browser to hit the Nginx endpoint in t
 ##Listing Services
 Once you have deployed workloads to AWS, you can run `bin/list-services.sh` to get a listing of the currently running containers.
 
+##Scaling Services
+If you want to increase the number of instances of your container run `bin/scale-service.sh 3` and it will increase the desired 
+count from 1 to 3.  Within moments, you should have 3 instances of Nginx running in your cluster.
+
 #Troubleshooting
 
 #License and Credits
