@@ -54,6 +54,9 @@ be undone.
 ##Installing Services
 Running `bin/create-service.sh` will install your services into ECS but will not start them.
 
+##Starting Services
+Running `bin/start-service.sh` will start a single instance of a previously installed service.
+
 #Troubleshooting
 
 #License and Credits
