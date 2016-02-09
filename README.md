@@ -47,6 +47,10 @@ count from 1 to 3.  Within moments, you should have 3 instances of Nginx running
 Use the `bin/stop-service.sh` script to shutdown all running instances of your service.  The service definition will remain in 
 ECS and can be scaled up at a later date.
 
+##Removing Services
+Use `bin/remove-service.sh` to spindown all running instances and then destroy the service definition.  This operation cannot 
+be undone.
+
 #Troubleshooting
 
 #License and Credits
