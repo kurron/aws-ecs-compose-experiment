@@ -36,6 +36,9 @@ There is a convenience script that simplifies the operation.  Simply run `bin/in
 should be deployed.  You can check your AWS console to verify that the service was successfully installed and running. 
 As before, you should be able to use your browser to hit the Nginx endpoint in the cloud.
 
+##Listing Services
+Once you have deployed workloads to AWS, you can run `bin/list-services.sh` to get a listing of the currently running containers.
+
 #Troubleshooting
 
 #License and Credits
