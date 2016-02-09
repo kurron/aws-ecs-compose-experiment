@@ -21,14 +21,16 @@ ecs:
     log_driver: json-file
     log_opt:
         max-size: 1g 
-    mem_limit: 256m 
+    # ECS cannot handle the 256m form
+    mem_limit: 256000000
     ports:
         - 9876:80
     privileged: false
     read_only: false
 #   security_opt:
-    ulimits:
-        nproc: 65535
+    # ECS cannot seem to handle this form
+#   ulimits:
+#       nproc: 65535
     user: root
     volumes:
         - /tmp:/does-not-exist
