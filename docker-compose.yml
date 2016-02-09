@@ -20,7 +20,7 @@ ecs:
 #   links:
     log_driver: json-file
     log_opt:
-        max-size: 1g 
+        max-size: 1g
     # ECS cannot handle the 256m form
     mem_limit: 256000000
     ports:
@@ -35,4 +35,4 @@ ecs:
     volumes:
         - /tmp:/does-not-exist
 #   volumes_from:
-    working_dir: / 
+    working_dir: /
