@@ -51,6 +51,9 @@ ECS and can be scaled up at a later date.
 Use `bin/remove-service.sh` to spindown all running instances and then destroy the service definition.  This operation cannot 
 be undone.
 
+##Installing Services
+Running `bin/create-service.sh` will install your services into ECS but will not start them.
+
 #Troubleshooting
 
 #License and Credits
