@@ -1,13 +1,36 @@
 ecs:
-    build: .
-    net: "host"
-    volumes:
-        - /home/vagrant:/home/developer
+#   command: --version
+    cpu_shares: 0
+    dns:
+        - 8.8.8.8
+        - 8.8.4.4
+    dns_search:
+        - kurron.org
+        - transparent.com
+#   entrypoint: /foo/bar
     environment:
-        AWS_ACCESS_KEY_ID: $AWS_ACCESS_KEY_ID
-        AWS_SECRET_ACCESS_KEY: $AWS_SECRET_ACCESS_KEY
-        AWS_REGION: $AWS_REGION
-    user: 1000:1000
-    stdin_open: true
-    tty: true
-    command: help
+        BAR: 'true'
+    extra_hosts:
+        - "master:192.168.1.1"
+        - "slave:192.168.1.254"
+    hostname: kara-el
+    image: nginx:latest
+    labels:
+        org.kurron.example.dictionary: "dictionary"
+#   links:
+    log_driver: json-file
+    log_opt:
+        max-size: 1g 
+    mem_limit: 256m 
+    ports:
+        - 9876:80
+    privileged: false
+    read_only: false
+#   security_opt:
+    ulimits:
+        nproc: 65535
+    user: root
+    volumes:
+        - /tmp:/does-not-exist
+#   volumes_from:
+    working_dir: / 
