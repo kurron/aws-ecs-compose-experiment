@@ -1,6 +1,6 @@
 #Overview
 This project is an experiment that runs the [Amazon ECS Command Line Interface](https://github.com/aws/amazon-ecs-cli/) 
-to install workload into Amazon ECS.  This project uses the Docker Compose form to define workloads.
+to install workloads into Amazon ECS.  This project uses the Docker Compose form to define workloads.
 
 #Prerequisites
 * a working [Docker](http://docker.io) engine
@@ -9,7 +9,7 @@ to install workload into Amazon ECS.  This project uses the Docker Compose form 
 * a working [Amazon ECS Cluster](https://aws.amazon.com/ecs/)
 
 #Building
-This project is merely a collection of data files for ECS to consume to there isn't anything to build.
+This project is merely a collection of data files for ECS so consume to there isn't anything to build.
 
 #Installation
 Only the software described in the prerequisites is required.
