@@ -43,6 +43,10 @@ Once you have deployed workloads to AWS, you can run `bin/list-services.sh` to g
 If you want to increase the number of instances of your container run `bin/scale-service.sh 3` and it will increase the desired 
 count from 1 to 3.  Within moments, you should have 3 instances of Nginx running in your cluster.
 
+##Stopping Services
+Use the `bin/stop-service.sh` script to shutdown all running instances of your service.  The service definition will remain in 
+ECS and can be scaled up at a later date.
+
 #Troubleshooting
 
 #License and Credits
