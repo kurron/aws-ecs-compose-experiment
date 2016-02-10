@@ -1,4 +1,4 @@
-ecs:
+nginx:
 #   command: --version
     cpu_shares: 0
     dns:
@@ -36,3 +36,43 @@ ecs:
         - /tmp:/does-not-exist
 #   volumes_from:
     working_dir: /
+
+redis:
+#   command: --version
+    cpu_shares: 0
+    dns:
+        - 8.8.8.8
+        - 8.8.4.4
+    dns_search:
+        - kurron.org
+        - transparent.com
+#   entrypoint: /foo/bar
+    environment:
+        BAR: 'true'
+    extra_hosts:
+        - "master:192.168.1.1"
+        - "slave:192.168.1.254"
+    hostname: zor-el
+    image: redis:latest
+    labels:
+        org.kurron.example.dictionary: "dictionary"
+#   links:
+    log_driver: json-file
+    log_opt:
+        max-size: 1g
+    # ECS cannot handle the 256m form
+    mem_limit: 512000000
+    ports:
+        - 6379:6379
+    privileged: false
+    read_only: false
+#   security_opt:
+    # ECS cannot seem to handle this form
+#   ulimits:
+#       nproc: 65535
+    user: root
+    volumes:
+        - /tmp:/does-not-exist
+#   volumes_from:
+    working_dir: /
+
