@@ -1,4 +1,4 @@
-nginx:
+web-front:
 #   command: --version
     cpu_shares: 0
     dns:
@@ -37,7 +37,7 @@ nginx:
 #   volumes_from:
     working_dir: /
 
-redis:
+web-back:
 #   command: --version
     cpu_shares: 0
     dns:
@@ -53,7 +53,7 @@ redis:
         - "master:192.168.1.1"
         - "slave:192.168.1.254"
     hostname: zor-el
-    image: redis:latest
+    image: nginx:latest
     labels:
         org.kurron.example.dictionary: "dictionary"
 #   links:
@@ -63,7 +63,7 @@ redis:
     # ECS cannot handle the 256m form
     mem_limit: 512000000
     ports:
-        - 6379:6379
+        - 5432:80
     privileged: false
     read_only: false
 #   security_opt:
